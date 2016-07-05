@@ -8,13 +8,13 @@ module Mrkt
       date ||= Time.now()
       converted_attributes = convert_attribute_hash(attributes)
 
-      input = {
+      input = [{
         leadId: lead_id,
         activityDate: date,
         activityType: activity_type_id,
         primaryAttributeValue: primary_attribute_value,
         attributes: converted_attributes
-      }
+      }]
       post("/rest/v1/activities/external.json") do |req|
         params = {
           input: input
