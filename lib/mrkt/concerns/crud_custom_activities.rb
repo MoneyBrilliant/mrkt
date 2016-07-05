@@ -5,7 +5,7 @@ module Mrkt
     end
 
     def create_custom_activity(lead_id, activity_type_id, primary_attribute_value, attributes: {}, date: nil)
-      date = data || Time.now()
+      date ||= Time.now()
       converted_attributes = convert_attribute_hash(attributes)
 
       input = {
