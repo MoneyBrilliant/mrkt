@@ -15,7 +15,7 @@ module Mrkt
         primaryAttributeValue: primary_attribute_value,
         attributes: converted_attributes
       }
-      post("/rest/v1/acvitities/external.json") do |req|
+      post("/rest/v1/activities/external.json") do |req|
         params = {
           input: input
         }
