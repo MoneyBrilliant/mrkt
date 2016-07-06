@@ -1,3 +1,5 @@
+require 'time'
+
 module Mrkt
   module CrudCustomActivities
     def get_list_of_custom_activity_types()
@@ -6,6 +8,7 @@ module Mrkt
 
     def create_custom_activity(lead_id, activity_type_id, primary_attribute_value, attributes: {}, date: nil)
       date ||= Time.now()
+      date = date.utc.iso8601
       converted_attributes = convert_attribute_hash(attributes)
 
       input = [{
