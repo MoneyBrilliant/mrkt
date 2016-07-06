@@ -14,7 +14,7 @@ module Mrkt
       input = [{
         leadId: lead_id,
         activityDate: date,
-        activityType: activity_type_id,
+        activityTypeId: activity_type_id,
         primaryAttributeValue: primary_attribute_value,
         attributes: converted_attributes
       }]
